@@ -1,0 +1,85 @@
+/* ChaosComm — global styles
+ * Loads Inter + JetBrains Mono from Google Fonts, defines CSS variables
+ * mirroring the Tailwind palette (handy for inline styles in canvases),
+ * and applies dark-cockpit base styling.
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Mirrors of tailwind config — useful for canvas/SVG drawing */
+    --bg-base: #0a0e1a;
+    --bg-panel: #141b2d;
+    --bg-raised: #1e2740;
+    --bg-line: #2a3454;
+    --amber: #fbbf24;
+    --phosphor: #10b981;
+    --cyan: #22d3ee;
+    --crimson: #ef4444;
+    --ink: #e2e8f0;
+    --ink-muted: #94a3b8;
+  }
+
+  html, body, #root {
+    height: 100%;
+    background: var(--bg-base);
+    color: var(--ink);
+  }
+
+  body {
+    font-family: "Inter", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Subtle radial vignette for cockpit depth */
+    background-image:
+      radial-gradient(ellipse at top, rgba(34, 211, 238, 0.04), transparent 60%),
+      radial-gradient(ellipse at bottom, rgba(251, 191, 36, 0.03), transparent 60%);
+  }
+
+  /* Custom scrollbar — thin, on-theme */
+  ::-webkit-scrollbar { width: 8px; height: 8px; }
+  ::-webkit-scrollbar-track { background: var(--bg-base); }
+  ::-webkit-scrollbar-thumb {
+    background: var(--bg-line);
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover { background: #3a4670; }
+
+  /* Selection */
+  ::selection { background: rgba(34, 211, 238, 0.3); color: #fff; }
+}
+
+@layer components {
+  /* Panel — the foundational card surface */
+  .panel {
+    @apply bg-bg-panel border border-bg-line rounded-lg shadow-panel;
+  }
+
+  /* Subtle grid background for "tactical" feel on hero sections */
+  .grid-bg {
+    background-image:
+      linear-gradient(rgba(42, 52, 84, 0.4) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(42, 52, 84, 0.4) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+
+  /* Status pill — small rounded badge */
+  .pill {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium;
+  }
+
+  /* Mono caption — for equations, numbers, code-like text */
+  .caption-mono {
+    @apply font-mono text-xs text-ink-muted tracking-tight;
+  }
+
+  /* Section header */
+  .section-title {
+    @apply text-sm font-semibold uppercase tracking-wider text-ink-muted;
+  }
+}
