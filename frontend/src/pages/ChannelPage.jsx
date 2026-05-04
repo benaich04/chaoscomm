@@ -28,7 +28,7 @@ import WaveformChart from "../components/charts/WaveformChart.jsx";
  *   POST /api/csk/pipeline
  */
 
-const API = "http://localhost:8000";
+const API = "https://chaoscomm.onrender.com";
 
 const SCHEMES = [
   { id: "csk", label: "CSK", desc: "Coherent — needs sync" },
@@ -676,7 +676,7 @@ export default function ChannelPage() {
         <div className="panel p-6 border-l-4 border-crimson/60">
           <div className="text-crimson font-semibold">Backend connection failed</div>
           <div className="text-sm text-ink-muted mt-1">
-            Make sure FastAPI is running on http://localhost:8000.
+            Make sure FastAPI is running on https://chaoscomm.onrender.com.
           </div>
         </div>
       </div>

@@ -17,7 +17,7 @@ import {
 import EquationDisplay from "../components/math/EquationDisplay.jsx";
 import LearnerCard from "../components/math/LearnerCard.jsx";
 
-const API = "http://localhost:8000";
+const API = "https://chaoscomm.onrender.com";
 
 const CURVE_STYLES = {
   bpsk: { color: "#10b981", label: "BPSK", dash: "0" },

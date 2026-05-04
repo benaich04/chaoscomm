@@ -26,7 +26,7 @@ import OrbitChart        from "../components/charts/OrbitChart.jsx";
  *   10. Deep-dive concept cards
  */
 
-const API = "http://localhost:8000";
+const API = "https://chaoscomm.onrender.com";
 
 const SCHEMES = [
   { id: "csk",     label: "CSK",      desc: "Coherent — needs sync" },

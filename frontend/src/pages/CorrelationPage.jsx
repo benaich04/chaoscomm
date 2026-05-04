@@ -12,7 +12,7 @@ import ParameterSlider from "../components/controls/ParameterSlider.jsx";
 import EquationDisplay from "../components/math/EquationDisplay.jsx";
 import LearnerCard     from "../components/math/LearnerCard.jsx";
 
-const API = "http://localhost:8000";
+const API = "https://chaoscomm.onrender.com";
 
 /**
  * CorrelationPage — the mathematical foundation of why chaos works for CSK.

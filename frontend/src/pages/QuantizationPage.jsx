@@ -31,7 +31,7 @@ import PDFOverlayChart       from "../components/charts/PDFOverlayChart.jsx";
  *   4. MSE compare   → POST /api/quantization/mse-comparison
  */
 
-const API = "http://localhost:8000";
+const API = "https://chaoscomm.onrender.com";
 
 const METHODS = [
   { id: "uniform_midrise",  label: "Uniform (midrise)",  color: "cyan" },

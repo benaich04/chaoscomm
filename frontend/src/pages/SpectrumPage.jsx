@@ -11,7 +11,7 @@ import ParameterSlider from "../components/controls/ParameterSlider.jsx";
 import EquationDisplay from "../components/math/EquationDisplay.jsx";
 import LearnerCard     from "../components/math/LearnerCard.jsx";
 
-const API = "http://localhost:8000";
+const API = "https://chaoscomm.onrender.com";
 
 const COMPARE_CONFIGS = [
   { name: "Logistic r=3.9", map_name: "logistic", parameter: 3.9 },

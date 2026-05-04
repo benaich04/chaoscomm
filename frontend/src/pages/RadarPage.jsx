@@ -12,7 +12,7 @@ import {
 } from "recharts";
 
 const Plot = PlotlyComponent.default || PlotlyComponent;
-const API = "http://localhost:8000";
+const API = "https://chaoscomm.onrender.com";
 
 export default function RadarPage() {
   const [delay, setDelay] = useState(20);

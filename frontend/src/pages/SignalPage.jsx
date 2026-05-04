@@ -24,7 +24,7 @@ import OrbitChart        from "../components/charts/OrbitChart.jsx";
  *   8. Concept cards
  */
 
-const API = "http://localhost:8000";
+const API = "https://chaoscomm.onrender.com";
 
 const PULSE_SHAPES = [
   { id: "nrz",            label: "NRZ (rectangular)",     hasAlpha: false },

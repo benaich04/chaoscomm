@@ -20,7 +20,7 @@ import OrbitChart      from "../components/charts/OrbitChart.jsx";
  *   7. Concept cards
  */
 
-const API = "http://localhost:8000";
+const API = "https://chaoscomm.onrender.com";
 
 export default function MatchedFilterPage() {
   const { mapsRegistry, mapsRegistryLoading, loadMapsRegistry, mapsRegistryError } = useStore();

@@ -17,7 +17,7 @@ import {
   Legend,
 } from "recharts";
 
-const API = "http://localhost:8000";
+const API = "https://chaoscomm.onrender.com";
 
 const MAPS = ["logistic", "tent", "bernoulli", "chebyshev"];
 
